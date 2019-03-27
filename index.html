@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>HTML5 Form Validation</title>
+
+</head>
+
+<body>
+
+<main class="form-validation">
+
+    <form id="form-example"
+          class="form-example">
+
+        <h1 class="form-example__title">
+            HTML5 Form Validation Example
+        </h1>
+
+        <label class="form-field"
+               for="form-field__input--title">
+
+            <!-- elemnents are in reverse order so that they can be reorganised by `order: n` (through flex), so that the conditional errors can be displayed with the general sibling combinator (~) -->
+
+            <select class="form-field__input form-field__input--title"
+                    id="form-field__input--title"
+                    required>
+
+                <option value=""
+                        disabled
+                        selected>
+                    Please Select an option</option>
+
+                <option value="mrs">Mrs</option>
+
+                <option value="mr">Mr</option>
+
+            </select>
+
+            <span class="form-field__validation form-field__validation--invalid">Please select a title</span>
+
+            <span class="form-field__validation form-field__validation--valueMissing">Please select a title</span>
+
+            <span class="form-field__validation form-field__validation--valid">Tick</span>
+
+            <span class="form-field__descriptor">Title</span>
+
+        </label>
+
+        <label class="form-field"
+               for="form-field__input--firstname">
+
+            <!-- elemnents are in reverse order so that they can be reorganised by `order: n`, that the conditional errors can be displayed with the general sibling combinator (~) -->
+
+            <input type="text"
+                   id="form-field__input--firstname"
+                   class="form-field__input form-field__input--firstname"
+                   required>
+
+            <span class="form-field__validation form-field__validation--invalid">Please enter your first name</span>
+
+            <span class="form-field__validation form-field__validation--valueMissing">Please enter your first name</span>
+
+            <span class="form-field__validation form-field__validation--valid">Tick</span>
+
+            <span class="form-field__descriptor">First name</span>
+
+        </label>
+
+        <label class="form-field"
+               for="form-field__input--surname">
+
+            <!-- elemnents are in reverse order so that they can be reorganised by `order: n`, that the conditional errors can be displayed with the general sibling combinator (~) -->
+
+
+            <input type="text"
+                   class="form-field__input form-field__input--surname"
+                   id="form-field__input--surname"
+                   required>
+
+            <span class="form-field__validation form-field__validation--invalid">Please enter your surname</span>
+
+            <span class="form-field__validation form-field__validation--valueMissing">Please enter your surname</span>
+
+            <span class="form-field__validation form-field__validation--valid">Tick</span>
+
+            <span class="form-field__descriptor">Surname</span>
+
+        </label>
+
+        <label class="form-field form-field--email"
+               for="form-field__input--email">
+
+            <!-- elemnents are in reverse order so that they can be reorganised by `order: n`, that the conditional errors can be displayed with the general sibling combinator (~) -->
+
+            <input type="email"
+                   class="form-field__input form-field__input--email"
+                   id="form-field__input--email"
+                   required>
+
+            <span class="form-field__validation form-field__validation--invalid">Please check your email address</span>
+
+            <span class="form-field__validation form-field__validation--valueMissing">Please enter your email</span>
+
+            <span class="form-field__validation form-field__validation--valid">Tick</span>
+
+            <span class="form-field__descriptor">Email</span>
+
+        </label>
+
+        <label class="form-field"
+               for="form-field__input--postcode">
+
+            <!-- elemnents are in reverse order so that they can be reorganised by `order: n`, that the conditional errors can be displayed with the general sibling combinator (~) -->
+
+            <input type="text"
+                   id="form-field__input--postcode"
+                   class="form-field__input form-field__input--postcode"
+                   pattern="^([A-Za-z][A-Ha-hK-Yk-y]?[0-9][A-Za-z0-9]? ?[0-9][A-Za-z]{2}|[Gg][Ii][Rr] ?0[Aa]{2})$">
+
+            <span class="form-field__validation form-field__validation--invalid">Please check your postcode</span>
+
+            <span class="form-field__validation form-field__validation--valueMissing">Please enter your postcode</span>
+
+            <span class="form-field__validation form-field__validation--valid">Tick</span>
+
+            <span class="form-field__descriptor">Postcode</span>
+
+
+        </label>
+
+        <button class="form-field__submit-button">submit</button>
+
+    </form>
+
+</main>
+
+<script src="scripts/main.js"></script>
+
+</body>
+
+</html>
