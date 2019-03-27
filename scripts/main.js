@@ -75,7 +75,7 @@ function setupValidationListeners() {
 
 }
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', function () {
 
     setupValidationListeners();
 
