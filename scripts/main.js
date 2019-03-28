@@ -1,5 +1,20 @@
 /**
  * @overview A collection of functions to aid in validating inputs conjointly with the HTML5 validation API. For each element listened to in `setupValidationListeners()` there should be corresponding html attributes (e.g. pattern, required) within the elements tag so that the `validationHandler()` can run correctly.
+ *
+ * In order for this to work the HTML input needs to be structured so that the conditional errors appear after the form input in the markup, e.g.:
+ *
+ * <label for="form-field__input--title">
+ *
+ *     <input class="form-field__input--title" type="text">
+ *
+ *     <span class="form-field__validation form-field__validation--invalid">
+ *
+ *     <span class="form-field__validation form-field__validation--valid">
+ *
+ *     <span class="form-field__validation form-field__validation--valueMissing">
+ *
+ * </label>
+ *
  */
 
 /**

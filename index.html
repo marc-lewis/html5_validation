@@ -14,19 +14,17 @@
 
 <body>
 
-<main class="form-validation">
+<section class="form-validation">
+
+    <h1 class="form-example__title">HTML5 Form Validation Example</h1>
 
     <form id="form-example"
           class="form-example">
 
-        <h1 class="form-example__title">
-            HTML5 Form Validation Example
-        </h1>
-
-        <label class="form-field"
+        <label class="form-field form-field--title"
                for="form-field__input--title">
 
-            <!-- elemnents are in reverse order so that they can be reorganised by `order: n` (through flex), so that the conditional errors can be displayed with the general sibling combinator (~) -->
+            <!-- elements are in reverse order, but reorganised by `order: n` (so through flex), so that the conditional errors can be displayed with the general sibling combinator (~) -->
 
             <select class="form-field__input form-field__input--title"
                     id="form-field__input--title"
@@ -53,10 +51,10 @@
 
         </label>
 
-        <label class="form-field"
+        <label class="form-field form-field--firstname"
                for="form-field__input--firstname">
 
-            <!-- elemnents are in reverse order so that they can be reorganised by `order: n`, that the conditional errors can be displayed with the general sibling combinator (~) -->
+            <!-- elemnents are in reverse order, but reorganised by `order: n`, so that the conditional errors can be displayed with the general sibling combinator (~) -->
 
             <input type="text"
                    id="form-field__input--firstname"
@@ -76,7 +74,7 @@
         <label class="form-field"
                for="form-field__input--surname">
 
-            <!-- elemnents are in reverse order so that they can be reorganised by `order: n`, that the conditional errors can be displayed with the general sibling combinator (~) -->
+            <!-- elemnents are in reverse order, but reorganised by `order: n`, so that the conditional errors can be displayed with the general sibling combinator (~) -->
 
 
             <input type="text"
@@ -97,7 +95,7 @@
         <label class="form-field form-field--email"
                for="form-field__input--email">
 
-            <!-- elemnents are in reverse order so that they can be reorganised by `order: n`, that the conditional errors can be displayed with the general sibling combinator (~) -->
+            <!-- elemnents are in reverse order, but reorganised by `order: n`, so that the conditional errors can be displayed with the general sibling combinator (~) -->
 
             <input type="email"
                    class="form-field__input form-field__input--email"
@@ -114,10 +112,10 @@
 
         </label>
 
-        <label class="form-field"
+        <label class="form-field form-field--postcode"
                for="form-field__input--postcode">
 
-            <!-- elemnents are in reverse order so that they can be reorganised by `order: n`, that the conditional errors can be displayed with the general sibling combinator (~) -->
+            <!-- elemnents are in reverse order, but reorganised by `order: n`, so that the conditional errors can be displayed with the general sibling combinator (~) -->
 
             <input type="text"
                    id="form-field__input--postcode"
@@ -139,7 +137,7 @@
 
     </form>
 
-</main>
+</section>
 
 <script src="scripts/main.js"></script>
 
