@@ -31,6 +31,28 @@ function removeValidationClasses(inputElement) {
 }
 
 /**
+ * Determine whether an input element has the required attribute
+ * @param {HTMLInputElement} inputElement - THe input element to check for the required attribute
+ * @returns {Boolean} - True if the inputElement has the required attribute, else false.
+ */
+function inputElementRequired(inputElement) {
+
+    return inputElement.required;
+
+}
+
+/**
+ * Determine whether an input element has any value
+ * @param {HTMLInputElement} inputElement - The input element to check for a value
+ * @returns {Boolean} - True if the inputElement does not have a value.
+ */
+function inputElementEmpty(inputElement) {
+
+    return inputElement.value === '';
+
+}
+
+/**
  * A handler to determine the validity of an input and apply a css class to the element based on the validity.
  * @param {object} e - The default event object.
  * @returns {void}
