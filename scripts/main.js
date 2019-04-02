@@ -35,14 +35,22 @@ function removeValidationClasses(inputElement) {
  * @param {object} e - The default event object.
  * @returns {void}
  */
-function validationHandler (e) {
+function validationHandler(e) {
 
     var inputElement = e.target;
     removeValidationClasses(inputElement);
 
+    // do not validate an unrequired empty input
+    if (!inputElementRequired(inputElement) && inputElementEmpty(inputElement)) {
+
+        return;
+
+    }
+
+    // return early if there is a value missing
     if (inputElement.validity.valueMissing) {
 
-        inputElement.classList.add('valueMissing');
+        inputElement.classList.add('invalid');
         return;
 
     }
